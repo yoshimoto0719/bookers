@@ -1,0 +1,39 @@
+<h1>Books</h1>
+<h2>New book</h2>
+
+<div class="title">
+  <h2>Title</h2>
+  <ul>
+    <li>リーダブルコード</li>
+    <li>トラブル知らずのシステム設計</li>
+    <li>たのしいRuby</li>
+    <li>入門Git</li>
+    <li>アルゴリズム図鑑</li>
+    <li>達人プログラマー</li>
+    <li>データベース実践入門</li>
+  </ul>
+</div>
+
+<div class="body">
+  <h2>Body</h2>
+  <ul>
+    <li>より良いコードを書くためのシンプルで実践的なテクニック</li>
+    <li>システム設計の要点を図解で説明してくれます</li>
+    <li>Rubyの入門におすすめです</li>
+    <li>gitについての基本操作から内部構造まで解説してくれます</li>
+    <li>アルゴリズムについてカラーイラストでしっかり解説してくれます</li>
+    <li>プログラマ入門者は必読！</li>
+    <li>効率的なSQL文を教えてくれます</li>
+  </ul>
+</div>
+
+<!-- form_with部分 -->
+<%= form_with model: @book do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'Create Book' %>
+<% end %>
